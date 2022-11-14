@@ -1,5 +1,5 @@
-import org.junit.Assert;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
@@ -23,7 +23,7 @@ public class FeedbackSuiteIT {
         System.out.println("Feedback page is open.");
         String title = chrome.getTitle();
         System.out.println("Feedback Title - " + title);
-        Assert.assertEquals("Правильный заголовок", title, "Обратная связь - Почта Банк");
+        Assert.assertEquals( title, "Обратная связь - Почта Банк","Правильный заголовок");
         chrome.quit();
         System.out.println("Chrome closed");
     }
